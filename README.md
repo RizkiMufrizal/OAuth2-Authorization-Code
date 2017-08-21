@@ -37,3 +37,32 @@ curl -X POST -vu clientid:secret http://localhost:8080/oauth/token -H "Accept: a
 ```
 
 ## Resource Server
+
+Untuk menjalankan Resource Server :
+
+* Akses Folder Resource-Server
+* Jalankan dengan perintah : `gradle bootRun`
+* Server akan jalan di port 8081
+
+Untuk dapat mengakses API silahkan jalankan perintah berikut :
+```
+curl "http://localhost:8081/api/barangs" \
+  -H "Authorization: Bearer <access_token>" \
+  -H "Content-Type: application/json"
+```
+
+Jika berhasil maka akan muncul output seperti berikut :
+
+```
+{
+    "content": [
+        "Aqua",
+        "Rinso"
+    ],
+    "_links": {
+        "self": {
+            "href": "http://localhost:8081/api/barangs"
+        }
+    }
+}
+```
