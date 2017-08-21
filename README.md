@@ -1,5 +1,7 @@
 # OAuth2-Authorization-Code
 
+## Authorization Server
+
 Untuk menjalankan Auth Server :
 
 * Akses Folder Auth-Server
@@ -33,3 +35,5 @@ curl -X POST -vu clientid:secret http://localhost:8080/oauth/token -H "Accept: a
   "jti" : "d8753731-0466-46a0-8550-d89f768b3db1"
 }
 ```
+
+## Resource Server
